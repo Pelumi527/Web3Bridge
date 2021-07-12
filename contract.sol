@@ -208,7 +208,7 @@ contract TrueUsd is Ownable,IERC20 {
     
     modifier timeMintNow(){
         require(_totalSupply<totalToMint);
-        require(block.timestamp.sub(_timeMintedLast)>= 20 seconds);
+        require(block.timestamp.sub(_timeMintedLast)>= 365 days);
         _;
     }
     
